@@ -63,6 +63,7 @@ def module_init():
         loginwindow.o("ui_button_wifi").connect(
             "clicked", _wifi_button_event)
         wmenu = wifi_widget.wifimenu()
+        loginwindow.o("ui_button_wifi").hide()
         loginwindow.o("ui_popover_wifi").add(wmenu)
         height = int(monitor.get_common_resolution().split("x")[1])
         loginwindow.o("ui_popover_wifi").set_size_request(400, height/2)
