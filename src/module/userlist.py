@@ -93,10 +93,18 @@ def load_userlist():
         gsettings_get("hidden-users").split("\n")
     for user in lightdm.get_user_list():
         user = user.get_name()
+        drm="0"
         if user in hidden_users:
             continue
-        users[user] = userButton(user)
-        loginwindow.o("ui_box_userlist").add(users[user])
+        
+        for item in users:
+            if user==item:
+                drm="1"
+
+        if drm == "0":
+            users[user] = userButton(user)
+            loginwindow.o("ui_box_userlist").add(users[user])
+    
     loginwindow.o("ui_box_userlist").show_all()
     if len(users) < 3:
         loginwindow.o("ui_entry_search_user").hide()
