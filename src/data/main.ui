@@ -145,8 +145,7 @@
                         <property name="orientation">vertical</property>
                         <property name="spacing">5</property>
                         <child>
-                          <object class="GtkBox">
-                            <property name="width-request">250</property>
+                          <object class="GtkBox" id="ui_box_username">
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <child>
@@ -160,7 +159,6 @@
                                     <property name="visible">True</property>
                                     <property name="can-focus">True</property>
                                     <property name="receives-default">True</property>
-                                    <property name="valign">center</property>
                                     <child>
                                       <object class="GtkLabel" id="ui_button_username_label">
                                         <property name="visible">True</property>
@@ -183,7 +181,6 @@
                                   <object class="GtkEntry" id="ui_entry_username">
                                     <property name="visible">True</property>
                                     <property name="can-focus">True</property>
-                                    <property name="valign">center</property>
                                     <property name="placeholder-text" translatable="yes">Username</property>
                                     <property name="input-hints">GTK_INPUT_HINT_NO_SPELLCHECK | GTK_INPUT_HINT_NO_EMOJI | GTK_INPUT_HINT_NONE</property>
                                     <style>
@@ -206,7 +203,8 @@
                             </child>
                             <child>
                               <object class="GtkButton" id="ui_button_userselect">
-                                <property name="width-request">30</property>
+                                <property name="width-request">31</property>
+                                <property name="height-request">31</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">True</property>
@@ -237,10 +235,10 @@
                         </child>
                         <child>
                           <object class="GtkEntry" id="ui_entry_password">
-                            <property name="width-request">250</property>
+                            <property name="width-request">31</property>
+                            <property name="height-request">31</property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
-                            <property name="halign">center</property>
                             <property name="valign">center</property>
                             <property name="visibility">False</property>
                             <property name="invisible-char">*</property>
@@ -349,11 +347,9 @@
                         <property name="spacing">5</property>
                         <child>
                           <object class="GtkEntry" id="ui_entry_reset_username">
-                            <property name="width-request">250</property>
                             <property name="visible">True</property>
                             <property name="sensitive">False</property>
                             <property name="can-focus">True</property>
-                            <property name="halign">center</property>
                             <property name="valign">center</property>
                             <property name="placeholder-text" translatable="yes">Username</property>
                             <style>
@@ -368,10 +364,8 @@
                         </child>
                         <child>
                           <object class="GtkEntry" id="ui_entry_new_password1">
-                            <property name="width-request">250</property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
-                            <property name="halign">center</property>
                             <property name="valign">center</property>
                             <property name="visibility">False</property>
                             <property name="invisible-char">*</property>
@@ -389,10 +383,8 @@
                         </child>
                         <child>
                           <object class="GtkEntry" id="ui_entry_new_password2">
-                            <property name="width-request">250</property>
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
-                            <property name="halign">center</property>
                             <property name="valign">center</property>
                             <property name="visibility">False</property>
                             <property name="invisible-char">*</property>
@@ -409,11 +401,9 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkBox">
-                            <property name="width-request">250</property>
+                          <object class="GtkBox" id="ui_box_reset_buttons">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="halign">center</property>
                             <property name="spacing">5</property>
                             <child>
                               <object class="GtkButton" id="ui_button_reset_cancel">
@@ -936,6 +926,40 @@ and power off the computer ?</property>
                     <property name="halign">end</property>
                     <property name="valign">center</property>
                     <child>
+                      <object class="GtkButton" id="ui_button_note">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="receives-default">True</property>
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                        <property name="relief">none</property>
+                        <property name="image-position">top</property>
+                        <property name="always-show-image">True</property>
+                        <child>
+                          <object class="GtkImage" id="ui_icon_message">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="pixel-size">36</property>
+                            <property name="icon-name">mail-unread-symbolic</property>
+                            <property name="icon_size">5</property>
+                            <style>
+                              <class name="text"/>
+                            </style>
+                          </object>
+                        </child>
+                        <style>
+                          <class name="icon"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
                       <object class="GtkButton" id="ui_button_wifi">
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
@@ -966,7 +990,7 @@ and power off the computer ?</property>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">0</property>
+                        <property name="position">1</property>
                       </packing>
                     </child>
                     <child>
@@ -1000,7 +1024,7 @@ and power off the computer ?</property>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">1</property>
+                        <property name="position">2</property>
                       </packing>
                     </child>
                     <child>
@@ -1034,7 +1058,7 @@ and power off the computer ?</property>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">2</property>
+                        <property name="position">3</property>
                       </packing>
                     </child>
                     <child>
@@ -1068,7 +1092,7 @@ and power off the computer ?</property>
                       <packing>
                         <property name="expand">False</property>
                         <property name="fill">True</property>
-                        <property name="position">3</property>
+                        <property name="position">4</property>
                       </packing>
                     </child>
                   </object>
@@ -1090,7 +1114,7 @@ and power off the computer ?</property>
                         <property name="can-focus">False</property>
                         <property name="halign">center</property>
                         <property name="valign">center</property>
-                        <property name="label">ETAHTA | 2024</property>
+                        <property name="label">TÜBİTAK ULAKBİM | 2024</property>
                         <style>
                           <class name="text"/>
                         </style>
@@ -1149,6 +1173,25 @@ WAN IP: </property>
         <style>
           <class name="text"/>
           <class name="monospace"/>
+        </style>
+      </object>
+    </child>
+    <style>
+      <class name="popover"/>
+    </style>
+  </object>
+  <object class="GtkPopover" id="ui_popover_notes">
+    <property name="can-focus">False</property>
+    <property name="relative-to">ui_button_note</property>
+    <child>
+      <object class="GtkTextView" id="ui_textview_notes">
+        <property name="visible">True</property>
+        <property name="can-focus">True</property>
+        <property name="wrap-mode">word</property>
+        <property name="input-hints">GTK_INPUT_HINT_NO_SPELLCHECK | GTK_INPUT_HINT_NO_EMOJI | GTK_INPUT_HINT_NONE</property>
+        <property name="monospace">True</property>
+        <style>
+          <class name="textview"/>
         </style>
       </object>
     </child>
@@ -1573,7 +1616,7 @@ WAN IP: </property>
         <child>
           <object class="GtkButton" id="ui_button_sleep">
             <property name="visible">True</property>
-            <property name="can-focus">True</property>
+            <property name="can-focus">False</property>
             <property name="receives-default">True</property>
             <property name="relief">none</property>
             <property name="image-position">top</property>
@@ -1634,7 +1677,6 @@ WAN IP: </property>
     </style>
   </object>
   <object class="GtkPopover" id="ui_popover_userlist">
-    <property name="width-request">200</property>
     <property name="can-focus">False</property>
     <property name="relative-to">ui_button_userselect</property>
     <property name="position">right</property>

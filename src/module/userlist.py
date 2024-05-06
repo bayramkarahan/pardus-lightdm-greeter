@@ -25,6 +25,7 @@ class userButton(Gtk.Box):
             delbut.connect("clicked", self.delete_button_event)
             img = Gtk.Image()
             img.set_from_icon_name("list-remove-symbolic", 0)
+            img.set_pixel_size(12*scale)
             delbut.set_image(img)
             self.pack_end(delbut, False, False, 0)
 
@@ -114,7 +115,6 @@ def load_userlist():
         loginwindow.o("ui_entry_search_user").connect(
             "changed", _user_search_event)
 
-
 def module_init():
     global users
     if not get("enabled", True, "userlist"):
@@ -125,4 +125,4 @@ def module_init():
 
     loginwindow.o("ui_button_userselect").connect("clicked", show_userlist)
     height = int(monitor.get_common_resolution().split("x")[1])
-    loginwindow.o("ui_popover_userlist").set_size_request(150, height/3)
+    loginwindow.o("ui_popover_userlist").set_size_request(200, height/3)

@@ -51,6 +51,7 @@ def network_control_event():
 wmenu = None
 def module_init():
     global wmenu
+    wifi_widget.set_scale(scale)
     if not get("show-widget", True, "network"):
         loginwindow.o("ui_button_network").hide()
         return
@@ -63,7 +64,7 @@ def module_init():
         loginwindow.o("ui_button_wifi").connect(
             "clicked", _wifi_button_event)
         wmenu = wifi_widget.wifimenu()
-        loginwindow.o("ui_button_wifi").hide()
         loginwindow.o("ui_popover_wifi").add(wmenu)
+        loginwindow.o("ui_button_wifi").hide()
         height = int(monitor.get_common_resolution().split("x")[1])
-        loginwindow.o("ui_popover_wifi").set_size_request(400, height/2)
+        loginwindow.o("ui_popover_wifi").set_size_request(400*scale, height/2)
