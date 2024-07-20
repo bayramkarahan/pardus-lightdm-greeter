@@ -117,7 +117,8 @@ class LoginWindow:
     def __screen_keyboard_event(self, event, data):
         if get("touch-mode", False):
             #os.system(get("screen-keyboard", "onboard", "keyboard")+"&")
-            os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
+            #os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
+            pass
 
 
 ############### password entry icon events ###############
