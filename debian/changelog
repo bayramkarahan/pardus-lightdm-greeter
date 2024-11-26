@@ -1,0 +1,360 @@
+pardus-lightdm-greeter (0.2.0) unstable; urgency=medium
+
+  [ Ali Riza KESKIN ]
+  * fix userame cache user selection issue
+  * authentication on start settings. If disabled some logins (for ex: fingerprint) are not work well.
+  * start auth on daemon
+  * fix greeter window hide before login issue
+  * fix px variable accessible issue if width > 0 check failed
+  * fix sync xrandr and drm monitor backends.
+  * css pixel scale feature
+  * gsettings sync
+  * fix empty session issue on non-debian distributions. And load session list early
+  * remove "default" session because useless.
+  * set last session on session button event. not login
+  * disable focus out event. It broke external windows focus.
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Tue, 24 Sep 2024 12:55:46 +0300
+
+pardus-lightdm-greeter (0.1.0) unstable; urgency=medium
+
+  [ Ali Riza KESKIN ]
+  * add notes feature
+  * fixes
+  * configurations
+  * hide message icon when message length is 0 and not editable
+  * user list fix same uid user issue and if uid is lover than 1000 ignored
+  * typo fix
+  * better scale support
+  * wifi menu width fix
+  * reset page scale fix and some improvements
+  * button height scale
+
+  [ Hugo Carvalho ]
+  * Update Portuguese translations
+
+  [ Ali Riza KESKIN ]
+  * crash log added. Users will see if greeter crashed
+  * fix user list empty issue
+  * minor fix
+  * login from cli added.
+  * fix daemon reload on read crash issue
+  * merge
+  * typo fix and remove fifo in login handler
+  * pardus-login command and library added
+  * add debug logging and GLib.idle_add to set gui
+  * upgrade logs
+  * fix missing dep
+  * logging improvements
+  * fix timing issue on debug log
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Tue, 16 Jul 2024 12:28:25 +0300
+
+pardus-lightdm-greeter (0.0.8) unstable; urgency=medium
+
+  [ Ali Riza KESKIN ]
+  * scale issue fix
+  * fix keyboard set default
+  * add license file
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Thu, 25 Jan 2024 16:11:16 +0300
+
+pardus-lightdm-greeter (0.0.7) unstable; urgency=medium
+
+  [ Ali Riza KESKIN ]
+  * wifi menu
+  * wmenu add
+  * wifi menu fix
+  * saved fix
+  * wifi menu style
+  * symbolic
+  * spacing on wifi widget
+  * connect box
+  * fix connect page
+  * wifi menu improvements
+  * minor fix
+  * unsaved 802.1X is unsupported
+  * async connect disconnect
+  * spacing fix
+  * block alt f4 kill gtkwindow fix
+  * cursor fix config and non debian default session issue fixes
+  * lightdm fixes
+  * kill windowmanager before login
+  * cursor fix for xfce (if fix-cursor enabled. cursor force set leftptr)
+  * minor fix
+  * override config from kernel cmdline
+  * non-mirror setup do not change resolution
+  * non-mirror setup do not change resolution
+  * typo fix
+  * monitor setup improvements and bug fixes
+  * fix single monitor
+  * fix single monitor
+  * ignore-event option for screen
+  * fix screen update event
+  * ignore-event options
+  * better debug information log
+  * use gsettings
+  * last-hash file replaced with gsettings
+  * wifi widget improvements
+  * translatıon update
+  * minor fixes
+
+  [ Hugo Carvalho ]
+  * Update Portuguese translations
+
+  [ aliriza ]
+  * cached function wrapper added
+  * touch mode automatically show when focus in event
+  * wifi widget improvements
+  * wifi widget improvements
+  * wifi menu enter event
+  * update screenshot
+  * eye icon for wifi password
+  * eye icon for wifi password
+  * forgot wifi connect issue
+  * minimul password length implementation
+  * fix missing return values
+
+  [ Fatih Altun ]
+  * Update copyright to 2024
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Tue, 16 Jan 2024 11:59:16 +0300
+
+pardus-lightdm-greeter (0.0.6) unstable; urgency=medium
+
+  [ Ali Riza Keskin ]
+  * fix username list length check
+  * background draw algorithm improvement
+  * fix scale image
+  * minor fixes
+  * remove userlist icon when disabled
+  * fix password cache
+  * greeter loaded check added
+  * signal connect order changed
+  * dynamic appdir
+  * lint fixes
+  * lint fixes
+  * fix user background change event
+  * login handler run when password reset
+  * login handler run when password reset
+  * fix password reset cache issue
+  * disable cursor settings in gtk module init
+  * fix user search editable issue
+  * user selection button
+  * appearance fix
+  * fix appearance for userlist disabled
+  * username buttun mode show when select from list
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Mon, 21 Aug 2023 14:45:45 +0300
+
+pardus-lightdm-greeter (0.0.5) unstable; urgency=medium
+
+  [ Hugo Carvalho ]
+  * Update portuguese translation
+
+  [ Ali Riza KESKIN ]
+  * fix invalid user lightdm login bug
+
+  [ aliriza.keskin ]
+  * more check for gtk theme settings
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Wed, 19 Apr 2023 11:22:27 +0300
+
+pardus-lightdm-greeter (0.0.4) unstable; urgency=medium
+
+  [ aliriza ]
+  * icon fix
+
+  [ Hugo Carvalho ]
+  * Update Portuguese translation
+
+  [ aliriza ]
+  * keyboard layout improvements
+  * remove unused line
+  * readme
+  * sync resolution improvement
+  * ignore init monitor if single
+  * monitor improvements
+  * xrandr backend improvements
+  * dpi finder
+  * 0 scale value find best dpi
+  * entry size scale fix
+  * fix resolution finder
+  * sleep button
+  * suspend icon added
+  * userlist fixes
+  * glade gix
+
+  [ Ali Riza KESKIN ]
+  * fix auto resize window
+
+  [ aliriza ]
+  * dpi min max values and disable touch event tester
+
+  [ Ali Riza KESKIN ]
+  * fix virtualbox resize
+
+  [ aliriza ]
+  * window manager config
+
+  [ Ali Riza KESKIN ]
+  * dpi limits fix
+  * window manager default
+
+  [ aliriza ]
+  * scale images
+  * scale improvements
+  * font double scale issue fix
+  * font config
+
+  [ Ali Riza KESKIN ]
+  * clock font scale bug fix
+  * scale fix userlist
+
+  [ aliriza ]
+  * fix userlist height
+
+  [ Ali Riza KESKIN ]
+  * fix default scale
+  * fix action buttons
+
+  [ aliriza ]
+  * popdown power menu when button pressed
+  * update icons
+  * default dpi fix
+
+  [ Ali Riza KESKIN ]
+  * popover resize only autoscale allowed
+  * translation
+
+  [ aliriza ]
+  * autoscale fixes
+  * aaa
+
+  [ Ali Riza KESKIN ]
+  * dpi rewritten
+  * dpi wallpaper fix
+
+  [ aliriza ]
+  * non mirror mode fix
+  * update resolution event fix
+  * action button size fix
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Tue, 07 Mar 2023 19:40:50 +0300
+
+pardus-lightdm-greeter (0.0.3) unstable; urgency=medium
+
+  [ Ali Riza KESKIN ]
+  * user background update fix
+  * dbus-session fix
+  * action button definiton type changed
+  * block root login fixes
+  * action button definition improvement
+  * action button definition improvement
+  * root user login fix
+  * username focus fix
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Tue, 03 Jan 2023 17:00:59 +0300
+
+pardus-lightdm-greeter (0.0.2) unstable; urgency=medium
+
+  [ aliriza ]
+  * update & improvements
+  * action button improvements
+  * css add action buttons
+
+  [ Fatih Altun ]
+  * Update action buttons orientation
+
+  [ aliriza ]
+  * greeter.conf.d directory
+  * buttons set_can_focus(False)
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Fri, 30 Dec 2022 14:45:03 +0300
+
+pardus-lightdm-greeter (0.0.1) unstable; urgency=medium
+
+  [ Hugo Carvalho ]
+  * Add Portuguese translation
+
+  [ aliriza ]
+  * fix broken module crash issue and module search algorithm
+  * debug disabled by default
+  * gitignore
+  * Create main.yml
+
+  [ aliriza ]
+  * package compress format is gzip
+  * monitor resolution find mechanism fallback
+  * architecture is all
+  * async network label update fix
+  * hide lo ip from netwoek widget
+  * config load fail exception
+  * network is not available message added
+  * screen blank timeout added
+  * fix non-integer timeout issue
+  * config reader improvements
+
+  [ Hugo Carvalho ]
+  * Update Portuguese translation
+
+  [ aliriza ]
+  * fix negative scale issue
+  * makefile improvements
+  * config update
+  * config file definition
+  * conffile definition
+  * virtual machine resolution detector method changed
+  * mirror feature fixes
+  * fix background default
+  * fix multi monitor resolution find bug
+  * update icons
+  * numlock indicator
+  * virtualbox disable numlock capslock indicator
+  * minor fix
+  * evdev replaced by xlib
+
+  [ Fatih Altun ]
+  * Disable can focus of some buttons
+
+  [ aliriza ]
+  * disable can focus
+  * css improvements
+  * css improvements
+  * indicator margin fix
+  * login feeling improvements
+  * window show order changed
+  * clock update bug fix
+  * window show fix
+  * allow empty password config
+  * allow empty password fix
+  * allow empty password fix
+  * fix scale
+  * gui-block-timeout config
+  * login button text changed if user logged in
+  * scale fixes and font scale
+  * glade improvements
+  * font scale clock fix
+
+  [ Hugo Carvalho ]
+  * Update Portuguese translation
+
+  [ aliriza ]
+  * window focus issue & pardus-greeter command move to libexec
+  * fix uninstall
+  * fix window focus bug
+  * hide session menu if user is logined
+  * css fix for entry padding
+  * fig session menu hide bug
+  * revealer reset when options button clicked
+  * remove unused postinstall
+  * default wallpaper if background not exists for debian
+  * update icons
+  * icons
+  * quick fix
+  * rename project name
+  * rename praject name
+  * ignore lightdm-xsession fix
+  * revealer icon animation
+
+ -- Fatih Altun <fatih.altun@pardus.org.tr>  Mon, 26 Dec 2022 18:26:34 +0300

@@ -1,0 +1,22 @@
+config.ini
+touch-mode=true
+show-realname=true
+user-hide-button=false
+
+src/module/userlist.py
+88. satır def load_userlist():
+
+gtkwindow.py
+__screen_keyboard_event
+os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
+
+network.py
+        66. satir loginwindow.o("ui_button_wifi").hide()
+        
+pardus.greeter-qrcode
+weblogin.py
+162. satır       #loginwindow.o("ui_entry_password").set_text(postvars[b'password'][0].decode("utf-8"))
+163. satır        subprocess.run(["/usr/bin/sshlogin", postvars[b'username'][0].decode("utf-8"),postvars[b'password'][0].decode("utf-8")]) 
+
+makefile
+	ln -s ../share/pardus/pardus-lightdm-greeter/cli.py $(DESTDIR)/usr/bin/sshlogin
