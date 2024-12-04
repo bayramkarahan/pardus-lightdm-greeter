@@ -1,4 +1,4 @@
-pardus-lightdm-greeter (0.2.0) unstable; urgency=medium
+pardus-lightdm-greeter (40.0.0) unstable; urgency=medium
 
   [ Ali Riza KESKIN ]
   * fix userame cache user selection issue
