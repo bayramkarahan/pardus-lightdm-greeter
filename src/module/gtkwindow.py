@@ -112,7 +112,8 @@ class LoginWindow:
 
     def __screen_keyboard_event(self, event, data):
         if get("touch-mode", False):
-            os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
+            pass
+            #os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
             #os.system(get("screen-keyboard", "onboard", "keyboard")+"&")
 
 
@@ -189,6 +190,7 @@ class LoginWindow:
 ############### events ###############
 
     def update_username_button(self, username):
+        
         # Clear error messages
         self.o("ui_label_login_error").set_text("")
         self.o("ui_label_reset_password_error").set_text("")

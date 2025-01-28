@@ -300,7 +300,7 @@
                                   <object class="GtkButton" id="ui_button_eye">
                                     <property name="width-request">31</property>
                                     <property name="height-request">31</property>
-                                    <property name="visible">True</property>
+                                    <property name="visible">False</property>
                                     <property name="can-focus">True</property>
                                     <property name="receives-default">True</property>
                                     <child>

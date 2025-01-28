@@ -4,12 +4,52 @@ show-realname=true
 user-hide-button=false
 
 src/module/userlist.py
-88. satır def load_userlist():
+# line 88.
+def load_userlist():
+    global _userlist_loaded
+    if _userlist_loaded:
+        return
+    _userlist_loaded = True
+    hidden_users = get("hidden-users", "root", "userlist").split(" ") + \
+        gsettings_get("hidden-users").split("\n")
+    for user in lightdm.get_user_list():
+        user = user.get_name()
+        drm="0"
+        if user in hidden_users:
+            continue
+        if user == "ebaqr":
+            continue
+        
+        for item in users:
+            if user==item:
+                drm="1"
 
+        if drm == "0":
+            users[user] = userButton(user)
+            loginwindow.o("ui_box_userlist").add(users[user])
+    
+    loginwindow.o("ui_box_userlist").show_all()
+    if len(users) < 3:
+        loginwindow.o("ui_entry_search_user").hide()
+    else:
+        loginwindow.o("ui_entry_search_user").connect(
+            "icon-press", _clear_user_search)
+        loginwindow.o("ui_entry_search_user").connect(
+            "changed", _user_search_event)
+            
+            
 gtkwindow.py
+line 113
 __screen_keyboard_event
 os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
+kapatmak için sadece pass yeterli
 
+    def __screen_keyboard_event(self, event, data):
+        if get("touch-mode", False):
+            pass
+            #os.system("onboard --theme=/usr/share/onboard/themes/Nightshade.theme --layout=/usr/share/onboard/layouts/'Full Keyboard.onboard'&")
+            
+            
 network.py
         66. satir loginwindow.o("ui_button_wifi").hide()
         
@@ -20,3 +60,17 @@ weblogin.py
 
 makefile
 	ln -s ../share/pardus/pardus-lightdm-greeter/cli.py $(DESTDIR)/usr/bin/sshlogin
+	
+src/module/daemon.py
+                #myedit line 32-39
+                loginwindow.o("ui_entry_search_user").set_text("")
+                loginwindow.o("ui_popover_userlist").popdown()
+                loginwindow.o("ui_stack_username").set_visible_child_name("show")
+                loginwindow.o("ui_entry_username").set_text(username)
+                loginwindow.o("ui_entry_password").grab_focus()
+                loginwindow.update_username_button(username)
+                #GLib.idle_add(loginwindow.o("ui_entry_username").set_text, username)
+                
+src/data/main.ui     
+#line 303	                               
+<property name="visible">False</property>

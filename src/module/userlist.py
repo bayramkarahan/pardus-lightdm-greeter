@@ -88,14 +88,14 @@ def load_userlist():
     if _userlist_loaded:
         return
     _userlist_loaded = True
-    hidden_users = get("hidden-users", "ebaqr", "userlist").split(" ") + \
-        gsettings_get("hidden-users").split("\n")
     hidden_users = get("hidden-users", "root", "userlist").split(" ") + \
         gsettings_get("hidden-users").split("\n")
     for user in lightdm.get_user_list():
         user = user.get_name()
         drm="0"
         if user in hidden_users:
+            continue
+        if user == "ebaqr":
             continue
         
         for item in users:
