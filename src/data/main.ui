@@ -1195,7 +1195,7 @@ and power off the computer ?</property>
                             <property name="can-focus">False</property>
                             <property name="halign">center</property>
                             <property name="valign">center</property>
-                            <property name="label">ETAHTA|2025</property>
+                            <property name="label">ETAHTA</property>
                             <style>
                               <class name="text"/>
                             </style>

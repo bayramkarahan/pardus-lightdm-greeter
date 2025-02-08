@@ -1,2 +1,4 @@
 #!/bin/bash
 usermod -aG netdev lightdm || true
+
+sed -i -e "s/ETAHTA/ETAHTA|$(date +%Y)-$(date +%m)/g" /usr/share/pardus/pardus-lightdm-greeter/data/main.ui
