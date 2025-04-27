@@ -18,7 +18,7 @@ def login(username=None, password=None, session=None):
         data["session"] = str(session)
 
     with open("/var/lib/lightdm/pardus-greeter", "a") as f:
-        print(json.dumps(data))
+        #print(json.dumps(data))
         f.write(json.dumps(data))
         f.flush()
 
