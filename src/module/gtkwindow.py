@@ -343,12 +343,7 @@ class LoginWindow:
         th.start()
 
     def set_background(self, bg=None):
-        if bg == None or not os.path.isfile(bg):
-            bg = appdir+"/data/bg-light.png"
-            if get("dark-theme", True):
-                bg = appdir+"/data/bg-dark.png"
-            if os.path.exists("/etc/alternatives/desktop-theme/login/background.svg"):
-                bg = "/etc/alternatives/desktop-theme/login/background.svg"
+        bg = "/usr/share/images/duvar.svg"
         if os.path.isfile(bg):
             try:
                 py = GdkPixbuf.Pixbuf.new_from_file(bg)
